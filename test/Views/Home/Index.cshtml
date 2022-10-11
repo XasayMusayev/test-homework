@@ -1,0 +1,30 @@
+﻿@using test.Models;
+@model List<Student>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Country</th>
+            <th scope="col">PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Surname</td>
+                    <td>@student.Age</td>
+                    <td>@student.Country</td>
+                    <td>@student.PhoneNumber</td>
+
+                </tr>
+                
+            }
+        }
+    </tbody>
+</table>
